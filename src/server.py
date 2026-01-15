@@ -4,7 +4,7 @@ import uvicorn
 #load_dotenv()
 
 import logging
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(name)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(name)s - %(message)s')
 
 from google.adk.agents import Agent
 from google.adk.a2a.utils.agent_to_a2a import to_a2a
@@ -12,6 +12,7 @@ from google.adk.a2a.utils.agent_to_a2a import to_a2a
 from a2a.types import (
     AgentCapabilities,
     AgentCard,
+    AgentSkill,
 )
 
 def main():
