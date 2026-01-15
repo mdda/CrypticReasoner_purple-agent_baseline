@@ -58,7 +58,12 @@ uv run pytest --agent-url http://localhost:9009
 
 The repository includes a GitHub Actions workflow that automatically builds, tests, and publishes a Docker image of your agent to GitHub Container Registry.
 
-If your agent needs API keys or other secrets, add them in Settings → Secrets and variables → Actions → Repository secrets. They'll be available as environment variables during CI tests.
+This baseline agent needs a GOOGLE_API_KEY key, so add it in :
+
+* Settings → Secrets and variables → Actions → Repository secrets. 
+
+This will make it available as an environment variable during CI tests.
+
 
 - **Push to `main`** → publishes `latest` tag:
 ```
