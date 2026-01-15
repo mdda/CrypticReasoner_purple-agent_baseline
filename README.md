@@ -1,15 +1,16 @@
 # A2A Agent Template
 
-A minimal template for building [A2A (Agent-to-Agent)](https://a2a-protocol.org/latest/) agents.
+A minimal purple (solver) baseline [A2A (Agent-to-Agent)](https://a2a-protocol.org/latest/) 
+agent for the CrypticReasoner evaluator in the [AgentBeats](https://agentbeats.dev) challenge.
 
 ## Project Structure
 
 ```
 src/
-├─ server.py      # Server setup and agent card configuration
-├─ executor.py    # A2A request handling
-├─ agent.py       # Your agent implementation goes here
-└─ messenger.py   # A2A messaging utilities
+├─ server.py      # Server setup and agent card configuration (all-in-one)
+├─ XXexecutor.py    # NOPE A2A request handling
+├─ XXagent.py       # NOPE Your agent implementation goes here
+└─ XXmessenger.py   # NOPE A2A messaging utilities
 tests/
 └─ test_agent.py  # Agent tests
 Dockerfile        # Docker configuration
@@ -19,18 +20,6 @@ pyproject.toml    # Python dependencies
    └─ test-and-publish.yml # CI workflow
 ```
 
-## Getting Started
-
-1. **Create your repository** - Click "Use this template" to create your own repository from this template
-
-2. **Implement your agent** - Add your agent logic to [`src/agent.py`](src/agent.py)
-
-3. **Configure your agent card** - Fill in your agent's metadata (name, skills, description) in [`src/server.py`](src/server.py)
-
-4. **Write your tests** - Add custom tests for your agent in [`tests/test_agent.py`](tests/test_agent.py)
-
-For a concrete example of implementing an agent using this template, see this [draft PR](https://github.com/RDI-Foundation/agent-template/pull/8).
-
 ## Running Locally
 
 ```bash
@@ -38,17 +27,17 @@ For a concrete example of implementing an agent using this template, see this [d
 uv sync
 
 # Run the server
-uv run src/server.py
+GOOGLE_API_KEY="YOUR-API-KEY-FROM-AISTUDIO" uv run src/server.py
 ```
 
 ## Running with Docker
 
 ```bash
 # Build the image
-docker build -t my-agent .
+docker build -t cryptic-reasoner_solver .
 
 # Run the container
-docker run -p 9009:9009 my-agent
+docker run -p 9009:9009 cryptic-reasoner_solver
 ```
 
 ## Testing
