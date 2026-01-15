@@ -1,5 +1,5 @@
 [project]
-name = "crypticreasoner-solver"
+name = "crypticreasoner_solver"
 version = "0.1.0"
 description = "A baseline A2A agent that solves Cryptic Crossword clues"
 readme = "README.md"
@@ -7,7 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "a2a-sdk[http-server]>=0.3.20",
     "uvicorn>=0.38.0",
-    
+
     "google-adk==1.22.1", # For Purple Basic agent (uses Gemini-Flash-2.0)
 ]
 

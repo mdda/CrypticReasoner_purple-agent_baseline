@@ -31,7 +31,7 @@ def main():
     )
 
     skill = AgentSkill(
-        id="crypticreasoning_solver",
+        id="crypticreasoner_solver",
         name="Cryptic Crossword Solver Baseline",
         description="Answers cryptic crossword clues",
         tags=["crypticreasoner"],
