@@ -29,6 +29,13 @@ def main():
         instruction="Solve the Cryptic Crossword clues given, using the functions provided.",
     )
 
+    skill = AgentSkill(
+        id="cryptic_solver",
+        name="Cryptic Crossword Solver Baseline",
+        description="Answers cryptic crossword clues",
+        tags=["crypticreasoner"],
+    )
+
     agent_card = AgentCard(
         name="crypticreasoner_solver",
         description='Attempts to solve Cryptic Crossword puzzles.',
@@ -37,7 +44,7 @@ def main():
         default_input_modes=['text'],
         default_output_modes=['text'],
         capabilities=AgentCapabilities(streaming=True),
-        skills=[],
+        skills=[skill],
     )
 
     a2a_app = to_a2a(root_agent, agent_card=agent_card)

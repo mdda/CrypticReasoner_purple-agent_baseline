@@ -8,9 +8,10 @@ agent for the CrypticReasoner evaluator in the [AgentBeats](https://agentbeats.d
 ```
 src/
 ├─ server.py      # Server setup and agent card configuration (all-in-one)
-├─ XXexecutor.py    # NOPE A2A request handling
-├─ XXagent.py       # NOPE Your agent implementation goes here
-└─ XXmessenger.py   # NOPE A2A messaging utilities
+├─ server_orig.py # UNUSED Server setup and agent card configuration
+├─ executor.py    # UNUSED A2A request handling
+├─ agent.py       # UNUSED Your agent implementation goes here
+└─ messenger.py   # UNUSED A2A messaging utilities
 tests/
 └─ test_agent.py  # Agent tests
 Dockerfile        # Docker configuration
